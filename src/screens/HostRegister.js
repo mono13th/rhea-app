@@ -7,11 +7,11 @@ import {
 } from "react-native";
 import { Container, Header, Content, Form, Item, Input, Label, Button } from 'native-base';
 
-function SignIn(props) {
+function HostRegister(props) {
   const {navigation} = props;
   return (
-    <Container>
-        <Header />
+    <Container style={styles.container}>
+        {/* <Header /> */}
         <Content>
           <Form>
             <Item floatingLabel>
@@ -26,9 +26,8 @@ function SignIn(props) {
               <Label>Remember Username / Password</Label>
             </Item>
             <Item>
-              <Button onPress={()=> alert('logged in')}>
-                <Text>LOGIN!</Text>
-              </Button>
+              <Button onPress={()=> navigation.navigate('HostInfo')}>
+                <Text>NEXT | Host Info</Text></Button>
             </Item>
           </Form>
         </Content>
@@ -40,8 +39,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#db443c',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   button: {
     width: '90%',
@@ -72,4 +69,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SignIn;
+export default HostRegister;

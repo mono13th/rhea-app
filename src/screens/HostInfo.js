@@ -7,7 +7,7 @@ import {
 } from "react-native";
 import { Container, Header, Content, Form, Item, Input, Label, Button } from 'native-base';
 
-function SignIn(props) {
+function HostInfo(props) {
   const {navigation} = props;
   return (
     <Container>
@@ -26,9 +26,8 @@ function SignIn(props) {
               <Label>Remember Username / Password</Label>
             </Item>
             <Item>
-              <Button onPress={()=> alert('logged in')}>
-                <Text>LOGIN!</Text>
-              </Button>
+            <Button onPress={()=> navigation.navigate('HostCar')}>
+                <Text>NEXT | Car Info</Text></Button>
             </Item>
           </Form>
         </Content>
@@ -72,4 +71,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SignIn;
+export default HostInfo;

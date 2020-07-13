@@ -7,7 +7,7 @@ import {
 } from "react-native";
 import { Container, Header, Content, Form, Item, Input, Label, Button } from 'native-base';
 
-function SignIn(props) {
+function HostCar(props) {
   const {navigation} = props;
   return (
     <Container>
@@ -26,9 +26,9 @@ function SignIn(props) {
               <Label>Remember Username / Password</Label>
             </Item>
             <Item>
-              <Button onPress={()=> alert('logged in')}>
+                <Button onPress={()=> alert('Welcome host!')}>
                 <Text>LOGIN!</Text>
-              </Button>
+                </Button>
             </Item>
           </Form>
         </Content>
@@ -72,4 +72,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SignIn;
+export default HostCar;
