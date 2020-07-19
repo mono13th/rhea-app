@@ -1,10 +1,33 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import Routes from './src/Routes';
-
+import { Root } from 'native-base';
+import * as Font from 'expo-font';
+import { AppLoading } from 'expo';
 export default class App extends Component {
-  render() {
+  constructor(props) {
+    super(props);
+    this.state = { loading: true };
+  }
+async componentDidMount() {
+    await Font.loadAsync({
+      Roboto: require('native-base/Fonts/Roboto.ttf'),
+      Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf'),
+    });
+    this.setState({ loading: false });
+  }
+render() {
+    if (this.state.loading) {
       return (
-          <Routes />
+        <Root>
+          <AppLoading />
+        </Root>
       );
+    } else {
+      return (
+        <Root>
+          <Routes />
+        </Root>
+      );
+    }
   }
 }
