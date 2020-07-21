@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Header, Left, Body, Icon, Title, Subtitle, Right, Content,  Text, Button, Form, Item, Label, Input, View } from "native-base";
+import { Container, Header, Left, Body, Icon, Title, DatePicker, Right, Content,  Text, Button, Form, Item, Label, Input, View , Picker} from "native-base";
 import { LoginStyle } from '../../styles/styles';
 
 export default class HostRegister extends Component{
@@ -9,22 +9,17 @@ export default class HostRegister extends Component{
         this.state = {
             phone: '',
             address: '',
-            city: ''
+            city: '',
+            usstate: ''
         };
     }
-
-    onUpdate = (val) => {
-        this.setState({
-          city: val
-        })
-      };
 
     handleComplete = () => {
       this.props.navigation.navigate('HostInfo')
     }
 
     onNavigationBack = () => {
-      this.props.navigation.navigate('Home')
+      this.props.navigation.navigate('Role')
     }
 
     // handleComplete(userid){
@@ -51,6 +46,9 @@ export default class HostRegister extends Component{
     //         });
     // }
 
+    onUsStateChange = (e) => {
+            this.setState({usstate: e});        
+    }
     render() {
         return (
             <Container style={LoginStyle.root}>
@@ -77,9 +75,18 @@ export default class HostRegister extends Component{
                             <Label style={LoginStyle.textColor}>Last Name</Label>
                             <Input onChangeText={(text) => this.setState({phone: text})} value={this.state.phone} />
                         </Item>                                                                    
-                        <Item floatingLabel>
-                            <Label style={LoginStyle.textColor}>Date of Birth</Label>
-                            <Input onChangeText={(text) => this.setState({phone: text})} value={this.state.phone} />
+                        <Item style={LoginStyle.dateStyle}>
+                          <DatePicker 
+                            locale={"en"}
+                            modalTransparent={false}
+                            animationType={"fade"}
+                            androidMode={"spinner"}
+                            placeHolderText="Date of Birth"
+                            placeHolderTextStyle={{ color: "#fff" }}
+                            maximumDate={new Date(2003, 12, 31)}
+                            textStyle={{ color: "#fff" }}
+                            disabled={false}                            
+                          />    
                         </Item>                                                                    
                         <Item floatingLabel>
                             <Label style={LoginStyle.textColor}>Phone</Label>
@@ -97,9 +104,22 @@ export default class HostRegister extends Component{
                             <Label style={LoginStyle.textColor}>City</Label>
                             <Input onChangeText={(text) => this.setState({phone: text})} value={this.state.phone} />
                         </Item>                                                                    
-                        <Item floatingLabel>
-                            <Label style={LoginStyle.textColor}>State</Label>
-                            <Input onChangeText={(text) => this.setState({address: text})} value={this.state.address} />
+                        <Item>
+                            {/* <Label style={LoginStyle.textColor}>State</Label>
+                            <Input onChangeText={(text) => this.setState({address: text})} value={this.state.address} /> */}
+                            <Picker
+                                    mode="dropdown"
+                                    placeholder="Select your City"
+                                    placeholderStyle={{ color: "#fff" }}
+                                    placeholderIconColor="#fff"
+                                    style={LoginStyle.stateStyle}
+                                    selectedValue={this.state.usstate}
+                                    onValueChange={this.onUsStateChange}
+                                >
+                                    <Picker.Item label="States" value="" />
+                                    <Picker.Item label="Arizona" value="AZ" />
+                                    <Picker.Item label="California" value="CA" />
+                            </Picker>
                         </Item>
                         <Item floatingLabel>
                             <Label style={LoginStyle.textColor}>Zipcode</Label>

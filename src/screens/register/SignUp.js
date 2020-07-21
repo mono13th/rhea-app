@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { Container, Header, Left, Body, Icon, Title, Subtitle, Right, Content,  Text, Button, Form, Item, Label, Input, View } from "native-base";
 import { LoginStyle } from '../../styles/styles';
-import { ActivityIndicator } from "react-native";
+import { ActivityIndicator, TouchableHighlight } from "react-native";
+import { FontAwesome5 } from '@expo/vector-icons';
+
 
 export default class Signup extends Component{
 
@@ -91,15 +93,15 @@ export default class Signup extends Component{
                         <Form>
                             <Item floatingLabel>
                                 <Label style={LoginStyle.textColor}>Username</Label>
-                                <Input onChangeText={(text) => this.setState({name: text})} value={this.state.name} />
+                                <Input style={LoginStyle.textColor} onChangeText={(text) => this.setState({name: text})} value={this.state.name} />
                             </Item>
                             <Item floatingLabel>
                                 <Label style={LoginStyle.textColor}>Email</Label>
-                                <Input onChangeText={(text) => this.setState({email: text})} value={this.state.email} />
+                                <Input style={LoginStyle.textColor} onChangeText={(text) => this.setState({email: text})} value={this.state.email} />
                             </Item>
                             <Item floatingLabel>
                                 <Label style={LoginStyle.textColor}>Password</Label>
-                                <Input secureTextEntry={true} onChangeText={(text) => this.setState({password: text})} value={this.state.password} />
+                                <Input style={LoginStyle.textColor} secureTextEntry={true} onChangeText={(text) => this.setState({password: text})} value={this.state.password} />
                             </Item>
                             
                             
@@ -107,14 +109,33 @@ export default class Signup extends Component{
                         <Text style={LoginStyle.error}>{this.state.msg? 'Warning! \n' + this.state.msg: ''}</Text>
                     </Content>
                     <View>              
-                        <Button  block onPress={this.handleSignUp} style={LoginStyle.buttonLogin}>
-                            <Text>Sign Up</Text>                        
+                        <Button  block onPress={this.handleSignUp} style={LoginStyle.buttonSignUp}>
+                            <Text style={LoginStyle.textSignUp}>Sign Up</Text>                        
                         </Button>         
-                      </View>
-                      <View style={LoginStyle.borderWhite}>  
+                    </View>
+                    <View style={LoginStyle.borderWhite}>  
                         <Text style={LoginStyle.optionsButton}>
                           or continue with options below
                         </Text>                            
+                        <View style={{flexDirection:'row'}}>
+                            <TouchableHighlight
+                                style={LoginStyle.buttonSocial}
+                                onPress={()=>navigation.navigate('HostRegister')}
+                            >
+                                <View style={LoginStyle.buttonGuest}>
+                                <FontAwesome5 name='google' size={50}/>
+                                </View>
+                            </TouchableHighlight>
+
+                            <TouchableHighlight
+                                style={LoginStyle.buttonSocial}
+                                onPress={() => navigation.navigate('GuestRegister')}
+                            >
+                                <View style={LoginStyle.buttonGuest}>                  
+                                <FontAwesome5 name='facebook' size={50}/>
+                                </View>
+                            </TouchableHighlight>
+                        </View>
                     </View>
                 </Container>
             );

@@ -16,9 +16,9 @@ export default class Role extends Component{
         this.props.navigation.navigate('Home')
     }
 
-    onNavigationToSignupHost = () => {
+    onNavigationToSignup = () => {
         //Actions.signup();
-        this.props.navigation.navigate('HostRegister')
+        this.props.navigation.navigate('Register')
     }
 
     onNavigationToComplete = () => {
@@ -88,10 +88,10 @@ export default class Role extends Component{
                     </View>                                                        
                 </Content>
                 <View style={HomeStyle.wrapButton}>
-                        <Button block style={HomeStyle.guest} onPress={this.onNavigationToSignupHost}>
+                        <Button block style={HomeStyle.guest} onPress={this.onNavigationToSignup}>
                             <Text>Host</Text>
                         </Button>          
-                        <Button block style={HomeStyle.host} onPress={this.onNavigationToSignupHost}>
+                        <Button block style={HomeStyle.host} onPress={this.onNavigationToSignup}>
                             <Text>Guest</Text>
                         </Button>                      
                     </View>

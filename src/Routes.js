@@ -5,7 +5,7 @@ import Home from './screens/Home';
 import SignIn from './screens/login/SignIn';
 import SignUp from './screens/register/SignUp';
 import Role from './screens/register/Role';
-import HostRegister from './screens/register/HostRegister';
+import Register from './screens/register/Register';
 import HostAdditional from './screens/register/HostAdditional';
 import HostInfo from './screens/register/HostInfo';
 import HostCar from './screens/register/HostCar';
@@ -22,7 +22,7 @@ function Routes() {
         <Stack.Screen name="SignIn" component={SignIn} />
         <Stack.Screen options={{headerShown: false}} name="SignUp" component={SignUp} />
         <Stack.Screen options={{headerShown: false}} name="Role" component={Role} />
-        <Stack.Screen options={{headerShown: false}} name="HostRegister" component={HostRegister} />
+        <Stack.Screen options={{headerShown: false}} name="Register" component={Register} />
         <Stack.Screen options={{headerShown: false}} name="HostAdditional" component={HostAdditional} />
         <Stack.Screen options={{headerShown: false}} name="HostInfo" component={HostInfo} />
         <Stack.Screen options={{headerShown: false}} name="HostCar" component={HostCar} />

@@ -54,12 +54,12 @@ export const LoginStyle = StyleSheet.create({
         color: '#fff'
     },
     headerStyle: {
-        backgroundColor: '#de4738',
-        height: 100,
-        elevation: 0
+        backgroundColor: 'transparent',
+        height: 150,
+        elevation: 0,
     },
     headerText: {
-        margin: 20
+        margin: 20,
     },  
     buttonBack: {
         elevation: 0, 
@@ -72,6 +72,15 @@ export const LoginStyle = StyleSheet.create({
         backgroundColor: '#404040',
         margin: 20,
     },
+    buttonSignUp: {
+        backgroundColor: '#fdd8d5',
+        margin: 20,
+        height: 80,
+    },
+    textSignUp: {
+        color: '#8c8c8c',
+        fontSize: 28
+    },
     forgotButton: {
         alignItems:'center',
         justifyContent: 'center',
@@ -81,10 +90,15 @@ export const LoginStyle = StyleSheet.create({
         marginTop: -10
     },
     borderWhite: {
+        //borderTopColor: '#fff',
+        //borderTopWidth: 1,
+        //marginTop: 10,
+        marginBottom: 10,
+        marginTop: 100,
         borderTopColor: '#fff',
-        borderTopWidth: 1,
-        marginTop: 10,
-        marginBottom: 10
+        borderTopWidth: 2,
+        justifyContent: 'center',
+        alignItems:'center'
     },
     optionsButton: {
         alignItems:'center',
@@ -103,6 +117,25 @@ export const LoginStyle = StyleSheet.create({
         backgroundColor: '#404040', 
         color:'#000', 
         justifyContent: 'center'
+    },
+    buttonSocial: {
+        margin:25,
+        backgroundColor: '#8c8c8c',
+        justifyContent:'center',
+        alignItems: 'center',
+        padding: 20,
+        width:100
+    },
+    stateStyle: {
+        color: '#fff',
+        marginLeft: -8,
+        marginTop: 15,
+    },
+
+    dateStyle: {
+        color: '#fff',
+        marginLeft: 15,
+        marginTop: 15,
     }
 });
 
