@@ -65,11 +65,11 @@ export default class HostInfo extends Component{
     }
 
     handleComplete = () => {
-      this.props.navigation.navigate('HostCar');
+      this.props.navigation.navigate('HostAdditional');
     }
 
     onNavigationBack = () => {
-      this.props.navigation.navigate('HostRegister')
+      this.props.navigation.navigate('Register')
     }
 
     // handleComplete(userid){

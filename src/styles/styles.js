@@ -68,8 +68,24 @@ export const LoginStyle = StyleSheet.create({
     textColor: {
         color: '#fff'
     },
+    rememberText:{
+        color: '#fff', 
+        marginLeft:0, 
+        marginTop:5, 
+        paddingTop:10,
+    },
+    rememberCheck:{
+        color: '#fff', 
+        marginTop:20, 
+        paddingTop:10
+    },
     buttonLogin: {
-        backgroundColor: '#404040',
+        backgroundColor: '#fff',
+        margin: 20,
+    },
+    buttonText: {
+        color: '#de4738',
+        fontSize:28,
         margin: 20,
     },
     buttonSignUp: {

@@ -19,7 +19,7 @@ function Routes() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen options={{headerShown: false}} name="Home" component={Home} />
-        <Stack.Screen name="SignIn" component={SignIn} />
+        <Stack.Screen options={{headerShown: false}} name="SignIn" component={SignIn} />
         <Stack.Screen options={{headerShown: false}} name="SignUp" component={SignUp} />
         <Stack.Screen options={{headerShown: false}} name="Role" component={Role} />
         <Stack.Screen options={{headerShown: false}} name="Register" component={Register} />
