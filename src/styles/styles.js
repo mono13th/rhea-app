@@ -6,46 +6,35 @@ export const HomeStyle = StyleSheet.create({
     root: {
         backgroundColor: '#de4738',
     },
-    banner: {
-        height: '100%',
-    },
     buttons: {
-        height: '20%',
+        height: '50%',
+        marginLeft: 50,
+        marginRight: 50,        
     },
     signIn: {
         backgroundColor: '#404040',
-        margin:10
+        margin:10,
+        borderRadius: 5,
     },
     signUp: {
         backgroundColor: '#8c8c8c',
         margin:10,
-        justifyContent:'center',
+        borderRadius: 5,
     },
     title:{
         justifyContent:'center',
         alignContent:'center',
         fontSize: 30,
         margin: 20,
-        marginTop:'50%',
+        marginTop:'80%',
         alignSelf: 'center',
         color: '#fff'
     },
-    guest:{
-        backgroundColor: '#8c8c8c',
-        margin: 20,
-        width: '40%'
+    textStyle:{
+        fontSize:24,
+        textTransform: 'capitalize',
+        fontWeight: 'normal',
     },
-    host: {
-        backgroundColor: '#404040',
-        margin: 20,
-        width: '40%'
-    },
-    wrapButton: {
-        justifyContent: 'center',
-        flexDirection: 'row',
-        margin: 30,
-        marginBottom: '100%'
-    }
 });
 
 export const LoginStyle = StyleSheet.create({
@@ -56,10 +45,21 @@ export const LoginStyle = StyleSheet.create({
     headerStyle: {
         backgroundColor: 'transparent',
         height: 150,
-        elevation: 0,
+        elevation: 0,                
     },
     headerText: {
-        margin: 20,
+        margin: 20,        
+        //backgroundColor:'#fff',
+        minWidth:100,
+        flex: 1,
+        alignItems: 'center'
+    },
+    titleText:{
+        fontSize: 28,
+        fontWeight: 'bold',
+    }, 
+    subtitleText:{
+        fontSize: 18,
     },  
     buttonBack: {
         elevation: 0, 
@@ -75,7 +75,14 @@ export const LoginStyle = StyleSheet.create({
         paddingTop:10,
     },
     rememberCheck:{
-        color: '#fff', 
+        borderColor:'#fff', 
+        backgroundColor: 'transparent',
+        marginTop:20, 
+        paddingTop:10
+    },
+    rememberChecked:{
+        borderColor:'#fff',
+        backgroundColor: '#a0a0a0',
         marginTop:20, 
         paddingTop:10
     },
@@ -87,7 +94,18 @@ export const LoginStyle = StyleSheet.create({
         color: '#de4738',
         fontSize:28,
         margin: 20,
+        textTransform: 'capitalize',
     },
+    borderWhite: {
+        marginBottom: 10,
+        marginTop: 10,
+        borderTopColor: '#fff',
+        borderTopWidth: 2,
+        justifyContent: 'center',
+        alignItems:'center',
+        flex:1,
+    },
+    //------//
     buttonSignUp: {
         backgroundColor: '#fdd8d5',
         margin: 20,
@@ -101,28 +119,18 @@ export const LoginStyle = StyleSheet.create({
         alignItems:'center',
         justifyContent: 'center',
         color: '#fff',
-        fontSize: 12,
+        fontSize: 18,
         textAlign: 'center',
         marginTop: -10
     },
-    borderWhite: {
-        //borderTopColor: '#fff',
-        //borderTopWidth: 1,
-        //marginTop: 10,
-        marginBottom: 10,
-        marginTop: 100,
-        borderTopColor: '#fff',
-        borderTopWidth: 2,
-        justifyContent: 'center',
-        alignItems:'center'
-    },
+   
     optionsButton: {
         alignItems:'center',
         justifyContent: 'center',
         color: '#fff',
         marginTop: 10,
         marginBottom: 10,
-        fontSize: 12,
+        fontSize: 18,
         textAlign: 'center',
     },
     error: {

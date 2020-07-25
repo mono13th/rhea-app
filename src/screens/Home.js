@@ -20,16 +20,13 @@ export default class Home extends Component{
                     <View style={HomeStyle.banner}>
                         <Text style={HomeStyle.title}>Find your next destination</Text>
                     </View>
-                    
-                    
-                    
                 </Content>
                 <View style={HomeStyle.buttons}>
                         <Button style={HomeStyle.signIn} onPress={this.onNavigationToSignIn} block>
-                            <Text>Login</Text>
+                            <Text style={HomeStyle.textStyle}>Login</Text>
                         </Button>          
                         <Button block style={HomeStyle.signUp} dark block onPress={this.onNavigationToSignUp}>
-                            <Text>Sign Up</Text>
+                            <Text style={HomeStyle.textStyle}>Sign Up</Text>
                         </Button>                      
                     </View>
             </Container>
