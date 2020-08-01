@@ -78,7 +78,7 @@ export const LoginStyle = StyleSheet.create({
     },  
     buttonBack: {
         elevation: 0, 
-        backgroundColor: '#de4738',       
+        backgroundColor: 'transparent',       
     },
     textColor: {
         color: '#fff'

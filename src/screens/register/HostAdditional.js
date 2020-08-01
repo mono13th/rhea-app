@@ -103,17 +103,17 @@ export default class HostAdditional extends Component{
         return (
             <Container style={LoginStyle.root}>
                 <Header style={LoginStyle.headerStyle}>
-                <Left>
-                    <Button  style={LoginStyle.buttonBack}>
-                        <Icon name='arrow-back' onPress={this.onNavigationBack} />
-                    </Button>
-                </Left>
-                
-                <Body style={LoginStyle.headerText}>
-                    <Title style={{ width: 200 }}>Profile</Title>                    
-                </Body>
-                <Right />
-                
+                    <Left style={{flex:1}}>
+                        <Button  style={LoginStyle.buttonBack}>
+                            <Icon name='arrow-back' onPress={this.onNavigationToHome} />
+                        </Button>
+                    </Left>
+                    
+                    <Body style={LoginStyle.headerText}>
+                        <Title >Profile</Title>                    
+                    </Body>
+                    <Right  style={{flex:1}} />
+                    
                 </Header>
                 <Content>
                     <Form>
