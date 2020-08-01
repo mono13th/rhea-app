@@ -151,7 +151,7 @@ export default class HostCar extends Component{
                     </Form>
                 </Content>
                 <View>              
-                    <Button  block onPress={() => this.handleCar(this.props.hostid)} style={LoginStyle.buttonLogin}>
+                    <Button  block onPress={() => this.handleCar(this.props.hostid)} style={LoginStyle.buttonSubmit}>
                         <Text>Confirm</Text>                        
                     </Button>         
                   </View>                  

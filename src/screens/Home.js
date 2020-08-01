@@ -22,10 +22,10 @@ export default class Home extends Component{
                     </View>
                 </Content>
                 <View style={HomeStyle.buttons}>
-                        <Button style={HomeStyle.signIn} onPress={this.onNavigationToSignIn} block>
+                        <Button style={HomeStyle.signIn} onPress={this.onNavigationToSignIn}>
                             <Text style={HomeStyle.textStyle}>Login</Text>
                         </Button>          
-                        <Button block style={HomeStyle.signUp} dark block onPress={this.onNavigationToSignUp}>
+                        <Button style={HomeStyle.signUp} onPress={this.onNavigationToSignUp}>
                             <Text style={HomeStyle.textStyle}>Sign Up</Text>
                         </Button>                      
                     </View>

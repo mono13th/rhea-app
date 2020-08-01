@@ -153,7 +153,7 @@ export default class HostAdditional extends Component{
                     </Form>
                 </Content>
                 <View>              
-                    <Button  block onPress={() => this.handleComplete(this.props.userid)} style={LoginStyle.buttonLogin}>
+                    <Button  block onPress={() => this.handleComplete(this.props.userid)} style={LoginStyle.buttonSubmit}>
                         <Text>Next</Text>                        
                     </Button>         
                   </View>                  

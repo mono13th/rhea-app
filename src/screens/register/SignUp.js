@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import { Container, Header, Left, Body, Icon, Title, Subtitle, Right, Content,  Text, Button, Form, Item, Label, Input, View } from "native-base";
 import { LoginStyle } from '../../styles/styles';
-import { ActivityIndicator, TouchableHighlight } from "react-native";
+import { ActivityIndicator, TouchableHighlight, Image } from "react-native";
 import { FontAwesome5 } from '@expo/vector-icons';
+import fb from '../../../assets/facebook-logo.png';
+import go from '../../../assets/google-logo.png';
 
 
 export default class Signup extends Component{
@@ -123,7 +125,7 @@ export default class Signup extends Component{
                                 onPress={()=>navigation.navigate('HostRegister')}
                             >
                                 <View style={LoginStyle.buttonGuest}>
-                                <FontAwesome5 name='google' size={50}/>
+                                <Image source={go} alt='google' style={{width:50, height: 50}} />
                                 </View>
                             </TouchableHighlight>
 
@@ -132,7 +134,7 @@ export default class Signup extends Component{
                                 onPress={() => navigation.navigate('GuestRegister')}
                             >
                                 <View style={LoginStyle.buttonGuest}>                  
-                                <FontAwesome5 name='facebook' size={50}/>
+                                <Image source={fb} alt='facebook' style={{width:50, height: 50}} />
                                 </View>
                             </TouchableHighlight>
                         </View>

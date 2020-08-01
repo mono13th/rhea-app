@@ -6,35 +6,50 @@ export const HomeStyle = StyleSheet.create({
     root: {
         backgroundColor: '#de4738',
     },
+    banner: {
+        height: '100%',
+        flex:1,
+    },
     buttons: {
-        height: '50%',
-        marginLeft: 50,
-        marginRight: 50,        
+        flex:1,
+        height: '20%',
     },
     signIn: {
         backgroundColor: '#404040',
         margin:10,
-        borderRadius: 5,
+        justifyContent:'center',          
     },
     signUp: {
         backgroundColor: '#8c8c8c',
-        margin:10,
-        borderRadius: 5,
+        margin:10,        
+        justifyContent:'center',        
     },
     title:{
         justifyContent:'center',
         alignContent:'center',
         fontSize: 30,
         margin: 20,
-        marginTop:'80%',
+        marginTop:'50%',
         alignSelf: 'center',
-        color: '#fff'
+        color: '#fff',
+        flex:1,
     },
-    textStyle:{
-        fontSize:24,
-        textTransform: 'capitalize',
-        fontWeight: 'normal',
+    host:{
+        backgroundColor: '#8c8c8c',
+        margin: 20,
+        width: '40%'
     },
+    guest: {
+        backgroundColor: '#404040',
+        margin: 20,
+        width: '40%'
+    },
+    wrapButton: {
+        justifyContent: 'center',
+        flexDirection: 'row',
+        margin: 30,
+        marginBottom: '100%'
+    }
 });
 
 export const LoginStyle = StyleSheet.create({
@@ -88,6 +103,10 @@ export const LoginStyle = StyleSheet.create({
     },
     buttonLogin: {
         backgroundColor: '#fff',
+        margin: 20,
+    },
+    buttonSubmit: {
+        backgroundColor: '#404040',
         margin: 20,
     },
     buttonText: {
@@ -148,7 +167,7 @@ export const LoginStyle = StyleSheet.create({
         justifyContent:'center',
         alignItems: 'center',
         padding: 20,
-        width:100
+        width:150
     },
     stateStyle: {
         color: '#fff',
